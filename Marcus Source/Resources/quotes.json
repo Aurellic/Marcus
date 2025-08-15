@@ -1,0 +1,47 @@
+[
+  {
+    "id": "q1",
+    "text": "You have power over your mind \u2014 not outside events.",
+    "author": "Marcus Aurelius",
+    "licenseTag": "PD",
+    "tags": [
+      "stoic"
+    ]
+  },
+  {
+    "id": "q2",
+    "text": "The impediment to action advances action.",
+    "author": "Marcus Aurelius",
+    "licenseTag": "PD",
+    "tags": [
+      "stoic"
+    ]
+  },
+  {
+    "id": "q3",
+    "text": "Waste no more time arguing what a good man should be. Be one.",
+    "author": "Marcus Aurelius",
+    "licenseTag": "PD",
+    "tags": [
+      "stoic"
+    ]
+  },
+  {
+    "id": "q4",
+    "text": "We are what we repeatedly do. Excellence, then, is not an act but a habit.",
+    "author": "Will Durant",
+    "licenseTag": "UserProvided",
+    "tags": [
+      "habit"
+    ]
+  },
+  {
+    "id": "q5",
+    "text": "The best time to plant a tree was 20 years ago. The second best time is now.",
+    "author": "Proverb",
+    "licenseTag": "UserProvided",
+    "tags": [
+      "action"
+    ]
+  }
+]
