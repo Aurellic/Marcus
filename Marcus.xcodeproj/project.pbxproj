@@ -77,11 +77,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4691B9312E4F690700A06293 /* Marcus */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Marcus;
-			sourceTree = "<group>";
-		};
 		4691B93F2E4F690800A06293 /* MarcusTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MarcusTests;
@@ -122,7 +117,6 @@
 		4691B9262E4F690700A06293 = {
 			isa = PBXGroup;
 			children = (
-				4691B9312E4F690700A06293 /* Marcus */,
 				4691B93F2E4F690800A06293 /* MarcusTests */,
 				4691B9492E4F690800A06293 /* MarcusUITests */,
 				4691B9302E4F690700A06293 /* Products */,
@@ -215,9 +209,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4691B9312E4F690700A06293 /* Marcus */,
 			);
 			name = Marcus;
 			packageProductDependencies = (

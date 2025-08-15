@@ -8,7 +8,7 @@ struct ChallengeDetailView: View {
     @State private var showQuickLog = false
 
     enum Tab: String, CaseIterable { case feed = "Feed", leaderboard = "Leaderboard", rules = "Rules" }
-
+// Test commit from Xcode
     var body: some View {
         VStack(spacing: 0) {
             // Tabs
