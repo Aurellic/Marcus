@@ -1,0 +1,13 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Xcode user-specific files
+xcuserdata/
+*.xcuserstate
+
+# Ignore scheme management files
+xcschememanagement.plist
+
+# Ignore build products
+DerivedData/
+build/
