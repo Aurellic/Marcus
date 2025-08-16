@@ -13,7 +13,11 @@ struct ChatView: View {
                             ChatBubble(message: m, isMe: m.userId == app.currentUser.id).id(m.id)
                         }
                     }.padding()
-                }.onChange(of: app.messages.count) { _ in if let last = app.messages.last { proxy.scrollTo(last.id, anchor: .bottom) } }
+                }.onChange(of: app.messages.count) { _, _ in
+                    if let last = app.messages.last {
+                        proxy.scrollTo(last.id, anchor: .bottom)
+                    }
+                }
             }
             HStack {
                 TextField("Message…", text: $text).textFieldStyle(.roundedBorder)

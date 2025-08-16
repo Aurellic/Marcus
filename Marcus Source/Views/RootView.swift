@@ -53,6 +53,6 @@ struct RootView: View {
                 .transition(.opacity)
             }
         }
-        .tint(Color("Blue")) // keep your accent color
+        .tint(Color("BrandBlue")) // keep your accent color
     }
 }

@@ -9,7 +9,7 @@ struct BlueCard<Content: View>: View {
         content
             .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color("Blue").opacity(0.10))
+            .background(Color("BrandBlue").opacity(0.10))
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 }
@@ -20,7 +20,7 @@ struct BlueCardStyle: ViewModifier {
         content
             .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color("Blue").opacity(0.10))
+            .background(Color("BrandBlue").opacity(0.10))
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 }
@@ -28,7 +28,6 @@ struct BlueCardStyle: ViewModifier {
 extension View {
     func blueCard() -> some View { self.modifier(BlueCardStyle()) }
 }
-import SwiftUI
 
 /// A blue card header that shows a Marcus image (context mood) with a short caption.
 struct MarcusHeaderCard: View {
@@ -56,13 +55,14 @@ struct MarcusHeaderCard: View {
 
     private func hint(for mood: MarcusMood) -> String {
         switch mood {
-        case .neutral:      return "Welcome back."
-        case .encouraging:  return "Nice work—keep the momentum."
-        case .reflective:   return "Take a moment to think deeply."
-        case .celebratory:  return "Milestones deserve a nod."
-        case .empathetic:   return "It’s okay to feel what you feel."
-        case .focused:      return "One step, then the next."
-        case .thinking:     return "Gathering your thoughts…"
+        case .neutral:
+            return "Welcome back."
+        case .focused:
+            return "One step, then the next."
+        case .thinking:
+            return "Gathering your thoughts…"
+        default:
+            return "You got this."
         }
     }
 }

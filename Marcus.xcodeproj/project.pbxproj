@@ -29,6 +29,7 @@
 		4691B9872E4F696500A06293 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691B9632E4F696500A06293 /* QuoteService.swift */; };
 		4691B9882E4F696500A06293 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691B95C2E4F696500A06293 /* Quote.swift */; };
 		4691B9892E4F696500A06293 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4691B9602E4F696500A06293 /* quotes.json */; };
+		46A1E6C72E50D70F004A1CBF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1E6C62E50D70B004A1CBF /* Colors.swift */; };
 		46AE68B82E4FCE440031F43C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AE68B72E4FCE440031F43C /* Assets.xcassets */; };
 		46AE68BB2E4FE9B50031F43C /* LaunchFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE68B92E4FE3A70031F43C /* LaunchFlowView.swift */; };
 		46CECA1D2E4FFAD00065FB7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CECA1C2E4FFAD00065FB7D /* LaunchScreen.storyboard */; };
@@ -80,6 +81,7 @@
 		4691B96F2E4F696500A06293 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		4691B9712E4F696500A06293 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4691B9722E4F696500A06293 /* MarcusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcusApp.swift; sourceTree = "<group>"; };
+		46A1E6C62E50D70B004A1CBF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		46AE68B72E4FCE440031F43C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46AE68B92E4FE3A70031F43C /* LaunchFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFlowView.swift; sourceTree = "<group>"; };
 		46CECA1C2E4FFAD00065FB7D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		4691B9702E4F696500A06293 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46A1E6C62E50D70B004A1CBF /* Colors.swift */,
 				46CECA222E50214D0065FB7D /* MarcusMood.swift */,
 				46CECA202E501DBA0065FB7D /* AvatarView.swift */,
 				46CECA1E2E5001590065FB7D /* UIStyles.swift */,
@@ -378,6 +381,7 @@
 				4691B9832E4F696500A06293 /* DataStore.swift in Sources */,
 				4691B9842E4F696500A06293 /* ChallengeDetailView.swift in Sources */,
 				4691B9852E4F696500A06293 /* RulesView.swift in Sources */,
+				46A1E6C72E50D70F004A1CBF /* Colors.swift in Sources */,
 				46CECA232E5021530065FB7D /* MarcusMood.swift in Sources */,
 				4691B9862E4F696500A06293 /* MarcusApp.swift in Sources */,
 				4691B9872E4F696500A06293 /* QuoteService.swift in Sources */,
