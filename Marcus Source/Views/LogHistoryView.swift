@@ -1,31 +1,40 @@
 import SwiftUI
 
 struct LogHistoryView: View {
-    @EnvironmentObject var app: AppState
     var body: some View {
-        List {
-            Section("This Week") {
-                ForEach(app.entries.sorted{ $0.at > $1.at }) { e in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(label(for: e)).font(.headline)
-                            Text(e.at.formatted(date: .abbreviated, time: .shortened)).font(.caption).foregroundColor(.secondary)
+        ZStack {
+            Color.white.ignoresSafeArea() // match Home background
+
+            ScrollView {
+                VStack(spacing: 16) {
+                    MarcusHeaderCard(mood: .empathetic, title: "How has the day been?")
+                    // EXAMPLE CARD 1 — replace with your real content later
+                    BlueCard {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Recent Reflections")
+                                .font(.headline)
+                            Text("You logged 3 entries this week.")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
                         }
-                        Spacer()
-                        Text(points(e.points)).bold()
+                    }
+
+                    // EXAMPLE CARD 2 — replace with your real content later
+                    BlueCard {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Today • Reflection")
+                                .font(.headline)
+                            Text("Noted what I can control and let the rest go.")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
+                .padding(.horizontal, 16)
+                .padding(.top, 12)
+                .padding(.bottom, 24)
             }
-        }.navigationTitle("History").listStyle(.insetGrouped)
-    }
-    func label(for e: Entry) -> String {
-        switch e.eventKey {
-        case "vigorous": return "+1 Workout (60m)"
-        case "pickle": return "+1 Pickleball (120m)"
-        case "drink": return "-1 Drink"
-        case "smoke": return "-1 Smoke"
-        default: return e.eventKey
         }
+        .navigationTitle("History")
     }
-    func points(_ p: Double) -> String { (p >= 0 ? "+" : "") + String(format: "%.0f", p) }
 }

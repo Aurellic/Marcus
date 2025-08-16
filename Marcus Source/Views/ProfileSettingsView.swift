@@ -1,28 +1,58 @@
 import SwiftUI
 
 struct ProfileSettingsView: View {
-    @EnvironmentObject var app: AppState
-    @State private var dailyQuoteOn = true
-    @State private var eveningNudgeOn = true
-    @State private var shareLogsOn = true
-    @State private var useHealthOn = false
     var body: some View {
-        List {
-            Section {
-                HStack(spacing: 12) {
-                    AvatarView(user: app.currentUser).frame(width: 42, height: 42)
-                    VStack(alignment: .leading) { Text(app.currentUser.name).font(.headline); Text("Joined \(Date(), format: .dateTime.year().month())").font(.caption).foregroundColor(.secondary) }
-                }
-            }
-            Section("Notifications") { Toggle("Daily Quote at 7am", isOn: $dailyQuoteOn); Toggle("Nudge if 0 points by 6pm", isOn: $eveningNudgeOn) }
-            Section("Privacy & Data") { Toggle("Share logs with members", isOn: $shareLogsOn); Toggle("Use Apple Health (read-only)", isOn: $useHealthOn) }
-        }.navigationTitle("Profile")
-    }
-}
+        ZStack {
+            Color.white.ignoresSafeArea() // match other tabs
 
-struct AvatarView: View {
-    let user: User
-    var body: some View {
-        ZStack { Circle().fill(user.avatarColor.color); Text(user.initials).bold().foregroundColor(.white) }
+            ScrollView {
+                VStack(spacing: 16) {
+                    MarcusHeaderCard(mood: .celebratory, title: "You’re building a habit.")
+                    // PROFILE INFO
+                    BlueCard {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Your Profile")
+                                .font(.headline)
+                            Text("Name: Jane Doe")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                            Text("Member since: August 2025")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+
+                    // SETTINGS
+                    BlueCard {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Settings")
+                                .font(.headline)
+                            Text("• Notifications: On")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                            Text("• Theme: Light")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+
+                    // LOGOUT / ACTIONS
+                    BlueCard {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Actions")
+                                .font(.headline)
+                            Button("Log Out") {
+                                // log out action
+                            }
+                            .foregroundColor(.red)
+                        }
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.top, 12)
+                .padding(.bottom, 24)
+            }
+        }
+        .navigationTitle("Profile")
     }
 }
